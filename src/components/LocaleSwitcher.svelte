@@ -1,12 +1,14 @@
 <script>
     import { init, _ } from "svelte-i18n";
     import { dictionary } from "svelte-i18n";
+    import { locale } from "../store.js";
     let locales = Object.keys($dictionary);
 
-    function setLocale(locale) {
+    function setLocale(paramLocale) {
         init({
-            initialLocale: locale,
+            initialLocale: paramLocale,
         });
+        $locale = paramLocale;
     }
 </script>
 

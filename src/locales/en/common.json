@@ -12,6 +12,9 @@
     "goback": "Go Back"
   },
   "welcome": "Welcome",
+  "goto": {
+    "index": "Go to Home Page"
+  },
   "theme": {
     "switch": {
       "title": "Switch theme"

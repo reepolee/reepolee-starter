@@ -12,6 +12,9 @@
     "goback": "Nazaj"
   },
   "welcome": "Dobrodošli",
+  "goto": {
+    "index": "Pojdi na domačo stran"
+  },
   "theme": {
     "switch": {
       "title": "Zamenjaj temo"

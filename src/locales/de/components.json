@@ -1,0 +1,9 @@
+{
+  "components": {
+    "title": "Komponenten",
+    "date": {
+      "description": "Komponente fuer datum",
+      "label": "Datum"
+    }
+  }
+}
