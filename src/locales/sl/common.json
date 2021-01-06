@@ -1,0 +1,20 @@
+{
+  "flag": "🇸🇮",
+  "app": {
+    "head": {
+      "company": "Reepolee",
+      "title": "Reepolee Routify predloga s Tailwindom, lokalizacijo in prilagojenimi slikami"
+    }
+  },
+  "page": {
+    "404": "Stran ne obstaja",
+    "home": "Domov",
+    "goback": "Nazaj"
+  },
+  "welcome": "Dobrodošli",
+  "theme": {
+    "switch": {
+      "title": "Zamenjaj temo"
+    }
+  }
+}

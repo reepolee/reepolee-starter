@@ -1,0 +1,10 @@
+{
+  "index": {
+    "title": "Startseite",
+    "description": "Dies ist die Homepage",
+    "content": "<p>Dies ist eine Vorlage für ein neues Svelte-Projekt. <br/> Es enthält TailwindCSS mit Dunkle Thema Umschalter, Lokalisierung mit svelte-i18n, einen Sprache Umschalter und eine automatisierte JPEG und PNG Konvertierung in WebP und Avif.</ p>",
+    "goto": {
+      "about": "Zur Über uns"
+    }
+  }
+}

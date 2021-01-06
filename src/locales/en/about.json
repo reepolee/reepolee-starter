@@ -1,0 +1,12 @@
+{
+  "about": {
+    "title": "About us",
+    "description": "About Reepolee",
+    "content": "<p>Hi, my name is Aleš Vaupotič and I've been transforming businesses to digital since 1986. </p>",
+    "goto": {
+      "index": "Go to Homepage"
+    },
+    "lazyloading": "Scroll way down 2000px to lazy load the logo.",
+    "de_not_translated": "The following text is not translated to German and falls back to English on German page:"
+  }
+}

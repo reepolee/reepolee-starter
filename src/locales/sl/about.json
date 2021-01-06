@@ -1,0 +1,12 @@
+{
+  "about": {
+    "title": "O nas",
+    "description": "O Reepolee-ju",
+    "content": "<p>Zdravo, sem Aleš Vaupotič in digitaliziram podjetja že od 1986. </p>",
+    "goto": {
+      "index": "Pojdi na domačo stran"
+    },
+    "lazyloading": "Pomaknite se navzdol po strani 2000 pik in logo se bo naložil po potrebi.",
+    "de_not_translated": "Naslednje besedilo ni prevedeno v nemščino in bo zato prikazano v angleščini, ko bo izbran nemški jezik:"
+  }
+}

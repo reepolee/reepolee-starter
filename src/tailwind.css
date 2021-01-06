@@ -1,0 +1,138 @@
+/* import if needed */
+/* @import "../assets/global.css"; */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  @apply min-h-screen;
+}
+
+body {
+  @apply flex;
+  @apply flex-col;
+  @apply bg-gray-100;
+  @apply dark:bg-gray-900;
+  @apply dark:text-gray-200;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+  @apply bg-gray-100;
+  @apply dark:bg-gray-900;
+}
+
+body::-webkit-scrollbar-thumb {
+  @apply bg-gray-700;
+  @apply dark:bg-gray-200;
+  outline: 1px solid var(--tw-gray-900);
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(128, 128, 128, 0.5);
+}
+
+#routify-app {
+  @apply min-h-full;
+  @apply flex;
+  @apply flex-col;
+  @apply flex-1;
+}
+
+h1 {
+  @apply p-8;
+  @apply text-3xl;
+  @apply w-full;
+}
+
+header {
+  width: 100%;
+  @apply bg-gray-100;
+  @apply dark:bg-gray-900;
+  @apply border-b border-gray-200;
+  @apply dark:border-gray-700;
+
+  @apply flex;
+  @apply flex-col;
+  @apply items-center;
+  @apply justify-between;
+  @apply px-4;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+aside {
+  @apply overflow-hidden;
+  @apply min-h-screen;
+  @apply pt-16;
+  @apply pl-2;
+  @apply pb-3;
+  @apply fixed;
+  @apply opacity-0;
+  left: -200px;
+  width: 200px;
+  transition: left 0.3s;
+}
+
+article {
+  margin-left: 0px;
+  padding: 1rem;
+  height: calc(100vh - 3rem);
+  transition: margin-left 0.5s;
+}
+
+@screen md {
+  header {
+    width: 100%;
+    height: 3rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    @apply flex;
+    @apply flex-row;
+    @apply items-center;
+    @apply justify-between;
+    @apply px-4;
+  }
+  article {
+    margin-top: 3rem;
+  }
+}
+
+@screen lg {
+  aside {
+    left: 0px;
+    opacity: 1;
+  }
+
+  article {
+    margin-left: 200px;
+  }
+}
+
+.link:hover {
+  @apply underline;
+  @apply text-gray-700;
+  @apply dark:text-gray-200;
+}
+
+.link.active {
+  @apply text-gray-700;
+  @apply dark:text-gray-200;
+  @apply font-bold;
+}
+
+.link.active:hover {
+  @apply no-underline;
+}

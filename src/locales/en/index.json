@@ -1,0 +1,10 @@
+{
+  "index": {
+    "title": "Home",
+    "description": "Home Page",
+    "content": "<p>This is a template for a new Svelte Project. <br/> It includes TailwindCSS with Dark Theme switcher, Localization with svelte-i18n, a Language Switcher and automated JPEG and PNG conversion to WebP and Avif.</p>",
+    "goto": {
+      "about": "Go to About us"
+    }
+  }
+}

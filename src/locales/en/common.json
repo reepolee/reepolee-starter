@@ -1,0 +1,20 @@
+{
+  "flag": "🇬🇧",
+  "app": {
+    "head": {
+      "company": "Reepolee",
+      "title": "Reepolee Routify Starter with Tailwind, i18n and Responsive images"
+    }
+  },
+  "page": {
+    "404": "Page not found",
+    "home": "Home",
+    "goback": "Go Back"
+  },
+  "welcome": "Welcome",
+  "theme": {
+    "switch": {
+      "title": "Switch theme"
+    }
+  }
+}

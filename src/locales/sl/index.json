@@ -1,0 +1,10 @@
+{
+  "index": {
+    "title": "Domov",
+    "description": "Domača stran",
+    "content": "<p>To je predloga za nov Svelte projekt.</p><p>Pripravljen je Tailwind s preklopnikom za temno temo, lokalizacija s svelte-i18n, preklopnik za jezike in avtomatizirano pretvarjanje JPEG in PNG slik v WebP in Avif format.</p>",
+    "goto": {
+      "about": "Pojdi na O nas"
+    }
+  }
+}
