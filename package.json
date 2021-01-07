@@ -72,6 +72,6 @@
     "blacklist": []
   },
   "dependencies": {
-    "flatpickr": "^4.6.9"
+    "dayjs": "^1.10.2"
   }
 }

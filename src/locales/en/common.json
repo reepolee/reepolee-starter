@@ -1,5 +1,7 @@
 {
   "flag": "🇬🇧",
+  "date_format": "mm/dd/yyyy",
+  "valid_date_formats": "MM/DD/YYYY|MM/D/YYYY|M/DD/YYYY|M/D/YYYY|MM/DD/YY|MM/D/YY|M/DD/YY|M/D/YY",
   "app": {
     "head": {
       "company": "Reepolee",
