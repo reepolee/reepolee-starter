@@ -1,5 +1,6 @@
 <script>
     import { _ } from "svelte-i18n";
+    import { metatags } from "@roxi/routify";
     import { params } from "@roxi/routify";
     import DatePicker from "../components/DatePicker.svelte";
     $: metatags.title = "Kitchen sink";
