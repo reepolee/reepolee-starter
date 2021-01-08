@@ -3,7 +3,9 @@
     import { metatags } from "@roxi/routify";
     import { params } from "@roxi/routify";
     import DatePickerInput from "../components/DatePickerInput.svelte";
-    $: metatags.title = "Kitchen sink";
+    import { goto } from "@roxi/routify/runtime/helpers";
+    $: pageNo = $params.page ? "#" + $params.page : "";
+    $: metatags.title = "Kitchen sink " + pageNo;
 
     let form = {
         date_from: new Date().toISOString().slice(0, 10),
@@ -13,6 +15,11 @@
     function handleFormSubmit() {
         return;
         window.alert(form.date);
+    }
+
+    function linkToRandomPage() {
+        let p = Math.floor(Math.random() * 100);
+        $goto("?q=reepolee&page=" + p);
     }
 </script>
 
@@ -24,10 +31,15 @@
     .field {
         @apply pb-6;
     }
+
+    pre {
+        @apply font-bold;
+        @apply mb-4;
+    }
 </style>
 
 <div class="p-8">
-    <p class="font-bold pb-4">{$_('components.date.description')}</p>
+    <p class="font-bold">{$_('components.date.description')}</p>
 
     <form on:submit|preventDefault={handleFormSubmit}>
         <div class="field">
@@ -40,12 +52,16 @@
         </div>
     </form>
 
-    <p class="pt-4">{$_('components.date.actual_date_values')}</p>
-    <pre class="font-bold">
+    <p>{$_('components.date.actual_date_values')}</p>
+    <pre>
         {form.date_from}, {form.date_to}
     </pre>
-
-    <p class="pt-4">{$_('components.query_params')}</p>
+    <p>
+        {$_('components.query_params')}
+        <button
+            class="underline font-bold ml-2"
+            on:click={linkToRandomPage}>Test</button>
+    </p>
     <pre>{JSON.stringify($params)}</pre>
 
     <p class="pt-24"><a href="/">{$_('goto.index')}</a></p>
