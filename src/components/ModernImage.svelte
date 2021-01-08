@@ -4,6 +4,20 @@
   import _jpeg from "../helpers/jpeg";
   export let src;
   export let alt;
+  export let loaded = false;
+  export let visible = false;
+
+  let imgElement;
+
+  function scrolled() {
+    if (!loaded && imgElement.width > 0) {
+      loaded = true;
+    }
+    let diff = imgElement.getBoundingClientRect().y - window.innerHeight;
+    visible = diff < 0;
+  }
+
+  document.addEventListener("scroll", scrolled);
 
   let sizes =
     "(max-width: 360px) 300px, (max-width: 640px) 400px, (max-width: 960px) 800px, (max-width: 1600px) 1200px, 5000px";
@@ -28,6 +42,11 @@
   <source
     srcset="{_jpeg(src, 300)} 300w, {_jpeg(src, 400)} 400w, {_jpeg(src, 800)} 800w, {_jpeg(src, 1200)} 1200w, {_jpeg(src, 1920)}"
     {sizes} />
-  <img {src} {alt} loading="lazy" class={$$props.class} />
+  <img
+    {src}
+    {alt}
+    loading="lazy"
+    class={$$props.class}
+    bind:this={imgElement} />
 </picture>
 <!-- <p>width: {w}px, ratio: {r}</p> -->

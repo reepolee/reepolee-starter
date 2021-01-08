@@ -20,6 +20,10 @@
     form div.field label {
         @apply pl-2;
     }
+
+    .field {
+        @apply pb-6;
+    }
 </style>
 
 <div class="p-8">
@@ -36,9 +40,11 @@
         </div>
     </form>
 
-    <p class="pt-24"><a href="/">{$_('goto.index')}</a></p>
+    <p>Page params, if any:</p>
     <pre>{JSON.stringify($params)}</pre>
+    <p>Actual date values:</p>
     <pre>
-        {form.date_from} -         {form.date_to}
+        {form.date_from}, {form.date_to}
     </pre>
+    <p class="pt-24"><a href="/">{$_('goto.index')}</a></p>
 </div>

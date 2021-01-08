@@ -1,8 +1,10 @@
 const production = !process.env.ROLLUP_WATCH;
+const forms = require("@tailwindcss/forms");
+const colors = require("tailwindcss/colors");
 
 module.exports = {
   darkMode: "class",
-  plugins: [],
+  plugins: [forms],
   theme: {
     fontFamily: {
       sans: "Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif",
@@ -14,6 +16,7 @@ module.exports = {
           600: "#9c0000",
           700: "#750000",
         },
+        gray: colors.trueGray,
       },
     },
   },

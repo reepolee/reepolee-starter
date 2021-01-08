@@ -7,7 +7,6 @@
     import { locale } from "../store.js";
     import { _ } from "svelte-i18n";
     import Icon from "../components/Icon.svelte";
-    import { onMount } from "svelte";
 
     export let dateValue = "";
     export let valid = true;
@@ -37,22 +36,12 @@
 
 <style>
     input {
-        @apply py-1;
-        @apply px-2;
-        @apply border-l;
-        @apply border-t;
-        @apply border-b;
-        @apply border-gray-300;
         @apply w-full;
     }
 
     button {
         @apply py-1;
         @apply px-2;
-        @apply border-r;
-        @apply border-t;
-        @apply border-b;
-        @apply border-gray-300;
     }
 
     .invalid {
@@ -67,8 +56,8 @@
         on:blur={updateDateValue}
         id={$$props.id}
         name={$$props.id}
-        autocomplete="off"
         class={invalidInput} />
+
     <button class={invalidInput}><Icon
             name="calendar"
             class="h-6 w-6" /></button>

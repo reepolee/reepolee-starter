@@ -72,6 +72,7 @@
     "blacklist": []
   },
   "dependencies": {
+    "@tailwindcss/forms": "^0.2.1",
     "dayjs": "^1.10.2"
   }
 }

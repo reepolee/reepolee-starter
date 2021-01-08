@@ -24,7 +24,7 @@ body {
 
 body::-webkit-scrollbar {
   width: 12px;
-  @apply bg-gray-100;
+  @apply bg-gray-50;
   @apply dark:bg-gray-900;
 }
 
@@ -35,7 +35,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 body::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(128, 128, 128, 0.5);
+  box-shadow: inset 0 0 6px var(--tw-gray-50);
 }
 
 #routify-app {
