@@ -1,9 +1,8 @@
 <script>
     import { _ } from "svelte-i18n";
-    import { metatags } from "@roxi/routify";
-    import { params } from "@roxi/routify";
-    import DatePickerInput from "../components/DatePickerInput.svelte";
+    import { metatags, params } from "@roxi/routify";
     import { goto } from "@roxi/routify/runtime/helpers";
+    import DatePickerInput from "../components/DatePickerInput.svelte";
     $: pageNo = $params.page ? "#" + $params.page : "";
     $: metatags.title = "Kitchen sink " + pageNo;
 
@@ -28,10 +27,6 @@
         @apply pl-2;
     }
 
-    .field {
-        @apply pb-6;
-    }
-
     pre {
         @apply font-bold;
         @apply mb-4;
@@ -40,8 +35,7 @@
 
 <div class="p-8">
     <p class="font-bold">{$_('components.date.description')}</p>
-
-    <form on:submit|preventDefault={handleFormSubmit}>
+    <form on:submit|preventDefault={handleFormSubmit} class="space-y-4 py-4">
         <div class="field">
             <label for="date_from">{$_('components.date.label')}</label>
             <DatePickerInput id="date_from" bind:dateValue={form.date_from} />
@@ -64,5 +58,5 @@
     </p>
     <pre>{JSON.stringify($params)}</pre>
 
-    <p class="pt-24"><a href="/">{$_('goto.index')}</a></p>
+    <p class="pt-24"><a href="/" class="text-link">{$_('goto.index')}</a></p>
 </div>

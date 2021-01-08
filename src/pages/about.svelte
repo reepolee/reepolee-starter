@@ -28,8 +28,9 @@
         src="/responsive/reepolee-labs.jpg"
         alt={$_('app.head.company')} />
     <div class="mb-8" />
-    <a href="/">{$_('about.goto.index')}</a>
+    <a href="/" class="text-link">{$_('about.goto.index')}</a>
 </div>
+
 {#if isLoaded}
     <div
         class="fixed mt-32 top-0 right-12 p-3 bg-reepolee-500 text-white z-10"

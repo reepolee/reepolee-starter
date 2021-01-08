@@ -15,6 +15,8 @@ body {
 }
 
 body {
+  @apply font-light;
+  @apply antialiased;
   @apply flex;
   @apply flex-col;
   @apply bg-gray-100;
@@ -140,4 +142,9 @@ article {
 
 .link.active:hover {
   @apply no-underline;
+}
+
+.text-link {
+  @apply font-bold;
+  @apply text-blue-800;
 }

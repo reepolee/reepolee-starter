@@ -13,5 +13,5 @@
     <p class="my-8">
         {@html $_('index.content')}
     </p>
-    <a href="/about">{$_('index.goto.about')}</a>
+    <a href="/about" class="text-link">{$_('index.goto.about')}</a>
 </div>
