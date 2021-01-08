@@ -19,6 +19,7 @@
     "build:app": "routify -b && rollup -c",
     "build:static": "spank",
     "serve": "spassr --ssr",
+    "serve-spa": "spassr",
     "rollup": "rollup -cw",
     "nollup": "nollup -c",
     "routify": "routify",

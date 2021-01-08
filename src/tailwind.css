@@ -22,6 +22,11 @@ body {
   @apply dark:text-gray-200;
 }
 
+body,
+header {
+  transition: background-color 0.7s, color 0.7s;
+}
+
 body::-webkit-scrollbar {
   width: 12px;
   @apply bg-gray-50;

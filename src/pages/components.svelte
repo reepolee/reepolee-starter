@@ -7,7 +7,7 @@
 
     let form = {
         date_from: new Date().toISOString().slice(0, 10),
-        date_to: "2020-12-31",
+        date_to: "2025-12-31",
     };
 
     function handleFormSubmit() {
@@ -40,12 +40,13 @@
         </div>
     </form>
 
-    <p>{$_('components.query_params')}</p>
-    <pre>{JSON.stringify($params)}</pre>
-
     <p class="pt-4">{$_('components.date.actual_date_values')}</p>
     <pre class="font-bold">
         {form.date_from}, {form.date_to}
     </pre>
+
+    <p class="pt-4">{$_('components.query_params')}</p>
+    <pre>{JSON.stringify($params)}</pre>
+
     <p class="pt-24"><a href="/">{$_('goto.index')}</a></p>
 </div>

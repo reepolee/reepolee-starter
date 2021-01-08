@@ -19,7 +19,6 @@
   }
 
   if (trackScrolling) {
-    console.log("addded");
     document.addEventListener("scroll", scrolled);
   }
 

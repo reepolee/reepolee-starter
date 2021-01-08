@@ -7,6 +7,7 @@
     import { locale } from "../store.js";
     import { _ } from "svelte-i18n";
     import Icon from "../components/Icon.svelte";
+    import { onMount } from "svelte";
 
     export let dateValue = "";
     export let valid = true;
@@ -19,6 +20,12 @@
     $: validDateFormats = $_("valid_date_formats").split("|");
     $: dateDisplay = new Date(dateValue).toLocaleDateString($locale);
     $: invalidInput = dirty && validated && !valid ? "invalid" : "";
+
+    onMount(() => {
+        if (!dateValue) {
+            dateValue = new Date().toISOString().slice(0, 10);
+        }
+    });
 
     function updateDateValue(el) {
         dirty = true;
