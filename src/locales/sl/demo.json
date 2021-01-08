@@ -1,0 +1,15 @@
+{
+  "demo": {
+    "bottom_image_loaded": "SPODNJA SLIKA NALOŽENA",
+    "bottom_image_in_viewport": "SPODNJA SLIKA VIDNA"
+  },
+  "components": {
+    "title": "Komponente",
+    "date": {
+      "description": "Komponente za datum",
+      "label": "Datum",
+      "actual_date_values": "Trenutne vrednosti"
+    },
+    "query_params": "URL parametri (če so prisotni):"
+  }
+}

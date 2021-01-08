@@ -21,9 +21,5 @@
     "switch": {
       "title": "Thema Wechseln"
     }
-  },
-  "demo": {
-    "bottom_image_loaded": "UNTERES BILD GELADEN",
-    "bottom_image_in_viewport": "UNTERES BILD SICHTBAR"
   }
 }

@@ -40,10 +40,11 @@
         </div>
     </form>
 
-    <p>Page params, if any:</p>
+    <p>{$_('components.query_params')}</p>
     <pre>{JSON.stringify($params)}</pre>
-    <p>Actual date values:</p>
-    <pre>
+
+    <p class="pt-4">{$_('components.date.actual_date_values')}</p>
+    <pre class="font-bold">
         {form.date_from}, {form.date_to}
     </pre>
     <p class="pt-24"><a href="/">{$_('goto.index')}</a></p>

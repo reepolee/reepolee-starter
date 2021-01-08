@@ -21,9 +21,5 @@
     "switch": {
       "title": "Switch theme"
     }
-  },
-  "demo": {
-    "bottom_image_loaded": "BOTTOM IMAGE LOADED",
-    "bottom_image_in_viewport": "BOTTOM IMAGE VISIBLE"
   }
 }

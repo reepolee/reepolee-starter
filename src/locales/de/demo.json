@@ -1,0 +1,15 @@
+{
+  "demo": {
+    "bottom_image_loaded": "UNTERES BILD GELADEN",
+    "bottom_image_in_viewport": "UNTERES BILD SICHTBAR"
+  },
+  "components": {
+    "title": "Komponenten",
+    "date": {
+      "description": "Komponenten für datum",
+      "label": "Datum",
+      "actual_date_values": "Aktuelle Werte:"
+    },
+    "query_params": "Aktuelle URL Parameter (falls vorhanden):"
+  }
+}

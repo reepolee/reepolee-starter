@@ -1,0 +1,15 @@
+{
+  "demo": {
+    "bottom_image_loaded": "BOTTOM IMAGE LOADED",
+    "bottom_image_in_viewport": "BOTTOM IMAGE VISIBLE"
+  },
+  "components": {
+    "title": "Components",
+    "date": {
+      "description": "Date related components",
+      "label": "Date",
+      "actual_date_values": "Current values:"
+    },
+    "query_params": "Query Parameters (if present):"
+  }
+}
