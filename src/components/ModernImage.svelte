@@ -6,6 +6,7 @@
   export let alt;
   export let loaded = false;
   export let visible = false;
+  export let trackScrolling = false;
 
   let imgElement;
 
@@ -17,7 +18,10 @@
     visible = diff < 0;
   }
 
-  document.addEventListener("scroll", scrolled);
+  if (trackScrolling) {
+    console.log("addded");
+    document.addEventListener("scroll", scrolled);
+  }
 
   let sizes =
     "(max-width: 360px) 300px, (max-width: 640px) 400px, (max-width: 960px) 800px, (max-width: 1600px) 1200px, 5000px";

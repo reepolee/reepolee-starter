@@ -24,6 +24,7 @@
     <ModernImage
         bind:loaded={isLoaded}
         bind:visible={isVisible}
+        trackScrolling
         src="/responsive/reepolee-labs.jpg"
         alt={$_('app.head.company')} />
     <div class="mb-8" />
@@ -31,7 +32,7 @@
 </div>
 {#if isLoaded}
     <div
-        class="fixed mt-32 top-0 right-12 p-3 bg-red-500 text-white z-10"
+        class="fixed mt-32 top-0 right-12 p-3 bg-reepolee-500 text-white z-10"
         transition:fly={{ x: 2000 }}>
         {$_('demo.bottom_image_loaded')}
     </div>
