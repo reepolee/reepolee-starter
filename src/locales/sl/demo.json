@@ -11,6 +11,10 @@
       "label": "Datum",
       "actual_date_values": "Trenutne vrednosti"
     },
+    "first_name": {
+      "label": "Ime",
+      "explain": "Rojstno ime"
+    },
     "query_params": "URL parametri (če so prisotni):"
   }
 }

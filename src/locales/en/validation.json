@@ -1,0 +1,9 @@
+{
+  "validation": {
+    "required": "Required entry",
+    "min_length": "Minimum length {chars, plural, =0 {zero chars} one {one char} other {# chars}}",
+    "date": "Field must be a date",
+    "date_before": "Date must be before {date}",
+    "date_after": "Date must be after {date}"
+  }
+}

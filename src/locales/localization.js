@@ -10,6 +10,8 @@ import en_index from "./en/index.json";
 en = { ...en, ...en_index };
 import en_about from "./en/about.json";
 en = { ...en, ...en_about };
+import en_validation from "./en/validation.json";
+en = { ...en, ...en_validation };
 
 import de_common from "./de/common.json";
 de = { ...de, ...de_common };
@@ -19,6 +21,8 @@ import de_index from "./de/index.json";
 de = { ...de, ...de_index };
 import de_about from "./de/about.json";
 de = { ...de, ...de_about };
+import de_validation from "./de/validation.json";
+de = { ...de, ...de_validation };
 
 import sl_common from "./sl/common.json";
 sl = { ...sl, ...sl_common };
@@ -28,6 +32,8 @@ import sl_index from "./sl/index.json";
 sl = { ...sl, ...sl_index };
 import sl_about from "./sl/about.json";
 sl = { ...sl, ...sl_about };
+import sl_validation from "./sl/validation.json";
+sl = { ...sl, ...sl_validation };
 
 import en_demo from "./en/demo.json";
 en = { ...en, ...en_demo };

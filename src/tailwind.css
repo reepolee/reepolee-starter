@@ -15,7 +15,6 @@ body {
 }
 
 body {
-  @apply font-light;
   @apply antialiased;
   @apply flex;
   @apply flex-col;
@@ -147,4 +146,8 @@ article {
 .text-link {
   @apply font-bold;
   @apply text-blue-800;
+}
+
+.input-field.invalid input {
+  @apply border-reepolee-500;
 }

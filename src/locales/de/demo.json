@@ -11,6 +11,7 @@
       "label": "Datum",
       "actual_date_values": "Aktuelle Werte:"
     },
+    "first_name": { "label": "Name", "explain": "Vorname" },
     "query_params": "Aktuelle URL Parameter (falls vorhanden):"
   }
 }

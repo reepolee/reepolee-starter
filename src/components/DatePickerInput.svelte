@@ -13,6 +13,7 @@
     export let valid = true;
     export let validated = false;
     export let dirty = false;
+    export let errorMessage = "";
 
     dayjs.extend(customParseFormat);
     dayjs.locale($locale);
@@ -32,11 +33,14 @@
         validated = true;
         let val = el.target.value.split(",").join(".");
         let entry = dayjs(val, validDateFormats, true);
+        console.log("entry", entry);
         if (dayjs(entry).isValid()) {
             dateValue = entry.format("YYYY-MM-DD");
             valid = true;
+            errorMessage = "";
         } else {
             valid = false;
+            errorMessage = "Not a date";
         }
     }
 </script>

@@ -1,0 +1,9 @@
+{
+  "validation": {
+    "required": "Obvezen vnos",
+    "min_length": "Length must be at least {chars}",
+    "date": "Polje mora biti datum",
+    "date_before": "Datum mora biti manjši od {date}",
+    "date_after": "Datum mora biti večji od {date}"
+  }
+}
