@@ -11,7 +11,7 @@
     $: pages = [
         ["/", $_("index.title"), "/index"], // path, title, route name
         ["/about", $_("about.title"), "/about"],
-        ["/components", $_("components.title"), "/components"],
+        ["/demo", $_("components.title"), "/demo"],
         ["/should-404", "404", "/should-404"], // here for testing purposes of _fallback only
     ];
 
