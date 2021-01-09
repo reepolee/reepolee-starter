@@ -18,12 +18,12 @@
   }
 </style>
 
-<div class="e404">
+<div class="e404 space-y-4">
   <p class="text-3xl">{$_('page.404')}</p>
   <img src="/images/touch-icons/logo-192.png" alt={$_('app.head.company')} />
   <!-- link to the parent folder of _fallback.svelte -->
   <button
-    class="text-link px-4 py-2"
+    class="text-link px-4"
     on:click={() => {
       window.history.go(-1);
       return false;

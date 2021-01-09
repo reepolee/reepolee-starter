@@ -33,7 +33,7 @@
     }
 </style>
 
-<div class="p-8">
+<div class="px-8">
     <p class="font-bold">{$_('components.date.description')}</p>
     <form on:submit|preventDefault={handleFormSubmit} class="space-y-4 py-4">
         <div class="field">
