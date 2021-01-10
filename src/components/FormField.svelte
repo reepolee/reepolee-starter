@@ -12,7 +12,7 @@
         display: grid;
         width: fit-content;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto 1fr 1fr;
+        grid-template-rows: auto 1fr 2rem;
         grid-template-areas:
             "label label"
             "input explain"
