@@ -7,14 +7,10 @@
   import FormField from "../components/FormField.svelte";
   import TextInput from "../components/TextInput.svelte";
   import { isRequired, minLength, hasError, dateAfter, dateBefore } from "../helpers/validators";
+  import { dateForDisplay } from "../helpers/helpers";
 
   $: pageNo = $params.page ? "#" + $params.page : "";
   $: metatags.title = "Kitchen sink " + pageNo;
-
-  function dateForDisplay(dateValue) {
-    console.log(dateValue);
-    return new Date(dateValue).toLocaleDateString($locale);
-  }
 
   let record = {
     first_name: { value: "Aleš", error: "" },
