@@ -64,12 +64,12 @@ export default {
     sourcemap: true,
     format: "esm",
     dir: buildDir,
-    // for performance, disabling filename hashing in development
+  //for performance, disabling filename hashing in development
     chunkFileNames: `[name]${(production && "-[hash]") || ""}.js`,
   },
   plugins: [
     alias({
-      // resolve: ['.svelte', '.js'], 
+    //resolve: ['.svelte', '.js'], 
       entries: [
         {
           find: '@',
@@ -83,7 +83,7 @@ export default {
     json(),
     svelte({
       dev: !production, // run-time checks
-      // Extract component CSS — better performance
+    //Extract component CSS — better performance
       css: (css) => css.write(`bundle.css`),
       hot: isNollup,
       preprocess: [
@@ -96,7 +96,7 @@ export default {
       ],
     }),
 
-    // resolve matching modules from current working directory
+  //resolve matching modules from current working directory
     resolve({
       browser: true,
       dedupe: (importee) => !!importee.match(/svelte(\/|$)/),
@@ -113,7 +113,7 @@ export default {
         public: assetsDir,
       }), // refresh only updated code
     {
-      // provide node environment on the client
+    //provide node environment on the client
       transform: (code) => ({
         code: code.replace("process.env.NODE_ENV", `"${process.env.NODE_ENV}"`),
         map: {

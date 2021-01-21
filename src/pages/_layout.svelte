@@ -7,7 +7,6 @@
   import ThemeSwitcher from "@/components/ThemeSwitcher.svelte";
 
   let uppercase = true;
-
   $: pages = [
     ["/", $_("index.title"), "/index"], // path, title, route name
     ["/about", $_("about.title"), "/about"],

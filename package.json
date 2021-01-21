@@ -30,12 +30,14 @@
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^11.1.0",
-    "@roxi/routify": "^2.10.4",
     "@tailwindcss/forms": "^0.2.1",
     "autoprefixer": "^10.2.3",
     "cross-env": "^7.0.2",
     "cssnano": "^4.1.10",
     "dayjs": "^1.10.3",
+    "eslint": "^7.18.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.22.1",
     "fast-glob": "^3.2.5",
     "fs-extra": "^9.1.0",
     "nollup": "^0.14.4",
@@ -53,7 +55,6 @@
     "sharp": "^0.27.0",
     "spank": "^1.5.0",
     "spassr": "^2.1.6",
-    "svelte": "^3.31.2",
     "svelte-i18n": "^3.3.0",
     "svelte-preprocess": "^4.6.1",
     "tailwindcss": "^2.0.2",
@@ -75,5 +76,8 @@
   "spank": {
     "blacklist": []
   },
-  "dependencies": {}
+  "dependencies": {
+    "@roxi/routify": "^2.10.4",
+    "svelte": "^3.31.2"
+  }
 }

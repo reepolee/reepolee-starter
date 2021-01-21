@@ -27,13 +27,13 @@ function resizeImage(img, width, inFile) {
   let outputFileWebP = outputFile.replace("jpg", "webp");
   img.resize(width, width, {
     fit: sharp.fit.inside,
-    //   withoutEnlargement: true,
+  //  withoutEnlargement: true,
   });
 
-  // for dev purposes, you might want to integrate image width into actual image to quickly see which one gets used by the browser
+//for dev purposes, you might want to integrate image width into actual image to quickly see which one gets used by the browser
   //
-  // const svg = new Buffer.from(`<svg height="${width / 2}" width="${width / 2}"> <text x="0" y="${width / 2}" font-size="${width / 5}" fill="#4400ff">${width}</text> </svg>`);
-  // img.composite([{ input: svg, gravity: "center" }]).toBuffer();
+//const svg = new Buffer.from(`<svg height="${width / 2}" width="${width / 2}"> <text x="0" y="${width / 2}" font-size="${width / 5}" fill="#4400ff">${width}</text> </svg>`);
+//img.composite([{ input: svg, gravity: "center" }]).toBuffer();
   //
 
   img.clone().toFormat("jpeg").jpeg({ quality: 65 }).toFile(outputFile);

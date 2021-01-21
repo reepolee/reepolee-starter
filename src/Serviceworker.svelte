@@ -9,7 +9,7 @@
       const wb = new Workbox("/serviceworker.js");
       const registration = await wb.register();
 
-      // Reload the page if the PWA has been updated. Change strategy if needed.
+    //Reload the page if the PWA has been updated. Change strategy if needed.
       wb.addEventListener("redundant", () => {
         location.reload();
         console.log("updated app");
