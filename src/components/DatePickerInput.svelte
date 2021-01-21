@@ -33,7 +33,6 @@
     validated = true;
     let val = el.target.value.split(",").join(".");
     let entry = dayjs(val, validDateFormats, true);
-    console.log("entry", entry);
     if (dayjs(entry).isValid()) {
       dateValue = entry.format("YYYY-MM-DD");
       valid = true;
@@ -46,7 +45,14 @@
 </script>
 
 <div class="flex w-48 dark:text-gray-700">
-  <input type="text" value={dateDisplay} on:blur={updateDateValue} id={$$props.id} name={$$props.id} class={invalidInput} />
+  <input
+    type="text"
+    value={dateDisplay}
+    on:blur={updateDateValue}
+    id={$$props.id}
+    name={$$props.id}
+    class={invalidInput}
+  />
 
   <button class={invalidInput}><Icon name="calendar" class="h-6 w-6" /></button>
 </div>

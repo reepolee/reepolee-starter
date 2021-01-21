@@ -1,26 +1,26 @@
-import svelte from "rollup-plugin-svelte-hot";
-import Hmr from "rollup-plugin-hot";
-import resolve from "@rollup/plugin-node-resolve";
-import commonjs from "@rollup/plugin-commonjs";
-import livereload from "rollup-plugin-livereload";
-import { terser } from "rollup-plugin-terser";
-import { copySync, removeSync } from "fs-extra";
-import { spassr } from "spassr";
-import getConfig from "@roxi/routify/lib/utils/config";
-import autoPreprocess from "svelte-preprocess";
-import { injectManifest } from "rollup-plugin-workbox";
-import postcssImport from "postcss-import";
-import postcss from "rollup-plugin-postcss";
-import json from "@rollup/plugin-json";
-import alias from '@rollup/plugin-alias'
-import path from "path";
+import svelte from 'rollup-plugin-svelte-hot';
+import Hmr from 'rollup-plugin-hot';
+import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+import livereload from 'rollup-plugin-livereload';
+import { terser } from 'rollup-plugin-terser';
+import { copySync, removeSync } from 'fs-extra';
+import { spassr } from 'spassr';
+import getConfig from '@roxi/routify/lib/utils/config';
+import autoPreprocess from 'svelte-preprocess';
+import { injectManifest } from 'rollup-plugin-workbox';
+import postcssImport from 'postcss-import';
+import postcss from 'rollup-plugin-postcss';
+import json from '@rollup/plugin-json';
+import alias from '@rollup/plugin-alias';
+import path from 'path';
 
 const { distDir } = getConfig(); // use Routify's distDir for SSOT
-const assetsDir = "assets";
-const buildDir = `dist/build`;
+const assetsDir = 'assets';
+const buildDir = 'dist/build';
 const isNollup = !!process.env.NOLLUP;
 const production = !process.env.ROLLUP_WATCH;
-process.env.NODE_ENV = production ? "production" : "development";
+process.env.NODE_ENV = production ? 'production' : 'development';
 
 const projectRootDir = path.resolve(__dirname);
 
@@ -59,23 +59,23 @@ const copyToDist = () => ({
 
 export default {
   preserveEntrySignatures: false,
-  input: [`src/main.js`],
+  input: ['src/main.js'],
   output: {
     sourcemap: true,
-    format: "esm",
+    format: 'esm',
     dir: buildDir,
-  //for performance, disabling filename hashing in development
-    chunkFileNames: `[name]${(production && "-[hash]") || ""}.js`,
+  // for performance, disabling filename hashing in development
+    chunkFileNames: `[name]${(production && '-[hash]') || ''}.js`,
   },
   plugins: [
     alias({
-    //resolve: ['.svelte', '.js'], 
+    // resolve: ['.svelte', '.js'],
       entries: [
         {
           find: '@',
-          replacement: path.resolve(projectRootDir, 'src')
+          replacement: path.resolve(projectRootDir, 'src'),
         },
-  ]
+      ],
     }),
     postcss({
       plugins: [postcssImport()],
@@ -83,20 +83,20 @@ export default {
     json(),
     svelte({
       dev: !production, // run-time checks
-    //Extract component CSS — better performance
-      css: (css) => css.write(`bundle.css`),
+    // Extract component CSS — better performance
+      css: (css) => css.write('bundle.css'),
       hot: isNollup,
       preprocess: [
         autoPreprocess({
           postcss: true,
           defaults: {
-            style: "postcss",
+            style: 'postcss',
           },
         }),
       ],
     }),
 
-  //resolve matching modules from current working directory
+  // resolve matching modules from current working directory
     resolve({
       browser: true,
       dedupe: (importee) => !!importee.match(/svelte(\/|$)/),
@@ -106,28 +106,28 @@ export default {
     production && terser(),
     !production && !isNollup && serve(),
     !production && !isNollup && livereload(distDir), // refresh entire window when code is updated
-    !production &&
-      isNollup &&
-      Hmr({
+    !production
+      && isNollup
+      && Hmr({
         inMemory: true,
         public: assetsDir,
       }), // refresh only updated code
     {
-    //provide node environment on the client
+    // provide node environment on the client
       transform: (code) => ({
-        code: code.replace("process.env.NODE_ENV", `"${process.env.NODE_ENV}"`),
+        code: code.replace('process.env.NODE_ENV', `"${process.env.NODE_ENV}"`),
         map: {
-          mappings: "",
+          mappings: '',
         },
       }),
     },
     injectManifest({
       globDirectory: assetsDir,
-      globPatterns: ["**/*.{js,css,svg}", "__app.html"],
-      swSrc: `src/sw.js`,
-      swDest: `dist/serviceworker.js`,
+      globPatterns: ['**/*.{js,css,svg}', '__app.html'],
+      swSrc: 'src/sw.js',
+      swDest: 'dist/serviceworker.js',
       maximumFileSizeToCacheInBytes: 10000000, // 10 MB,
-      mode: "production",
+      mode: 'production',
     }),
     production && copyToDist(),
   ],
