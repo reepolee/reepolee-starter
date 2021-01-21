@@ -1,6 +1,6 @@
 <script>
-  import { webp as _webp, avif as _avif, jpeg as _jpeg } from "../helpers/helpers";
-  import viewport from "../actions/viewport";
+  import { webp as _webp, avif as _avif, jpeg as _jpeg } from "@/helpers/helpers";
+  import viewport from "@/actions/viewport";
   export let src;
   export let alt;
   export let visible = false;

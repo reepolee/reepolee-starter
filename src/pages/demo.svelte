@@ -1,13 +1,13 @@
 <script>
   import { _ } from "svelte-i18n";
-  import { locale } from "../store.js";
+  import { locale } from "@/store.js";
   import { metatags, params } from "@roxi/routify";
   import { goto } from "@roxi/routify/runtime/helpers";
-  import DatePickerInput from "../components/DatePickerInput.svelte";
-  import FormField from "../components/FormField.svelte";
-  import TextInput from "../components/TextInput.svelte";
-  import { isRequired, minLength, hasError, dateAfter, dateBefore } from "../helpers/validators";
-  import { dateForDisplay } from "../helpers/helpers";
+  import DatePickerInput from "@/components/DatePickerInput.svelte";
+  import FormField from "@/components/FormField.svelte";
+  import TextInput from "@/components/TextInput.svelte";
+  import { isRequired, minLength, hasError, dateAfter, dateBefore } from "@/helpers/validators";
+  import { dateForDisplay } from "@/helpers/helpers";
 
   $: pageNo = $params.page ? "#" + $params.page : "";
   $: metatags.title = "Kitchen sink " + pageNo;
@@ -40,7 +40,7 @@
       $_("validation.date_after", {
         values: { date: dateForDisplay("2020-01-01") },
       }),
-      errorBag,
+      errorBag
     );
 
     dateBefore(
@@ -50,7 +50,7 @@
       $_("validation.date_before", {
         values: { date: dateForDisplay("2020-12-31") },
       }),
-      errorBag,
+      errorBag
     );
 
     return errorBag;

@@ -12,6 +12,8 @@ import { injectManifest } from "rollup-plugin-workbox";
 import postcssImport from "postcss-import";
 import postcss from "rollup-plugin-postcss";
 import json from "@rollup/plugin-json";
+import alias from '@rollup/plugin-alias'
+import path from "path";
 
 const { distDir } = getConfig(); // use Routify's distDir for SSOT
 const assetsDir = "assets";
@@ -19,6 +21,8 @@ const buildDir = `dist/build`;
 const isNollup = !!process.env.NOLLUP;
 const production = !process.env.ROLLUP_WATCH;
 process.env.NODE_ENV = production ? "production" : "development";
+
+const projectRootDir = path.resolve(__dirname);
 
 // clear previous builds
 removeSync(distDir);
@@ -64,6 +68,15 @@ export default {
     chunkFileNames: `[name]${(production && "-[hash]") || ""}.js`,
   },
   plugins: [
+    alias({
+      // resolve: ['.svelte', '.js'], 
+      entries: [
+        {
+          find: '@',
+          replacement: path.resolve(projectRootDir, 'src')
+        },
+  ]
+    }),
     postcss({
       plugins: [postcssImport()],
     }),
@@ -120,6 +133,6 @@ export default {
   ],
   watch: {
     clearScreen: false,
-    buildDelay: 100,
+    buildDelay: 10,
   },
 };

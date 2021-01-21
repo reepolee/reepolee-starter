@@ -1,6 +1,6 @@
 # reepolee-starter
 
-Starter template for [Routify](https://github.com/sveltech/routify) with added [TailwindCSS](https://tailwindcss.com) and localization with [Svelte i18n](https://github.com/kaisermann/svelte-i18n). Image transformation is using [sharp](https://sharp.pixelplumbing.com/).
+Starter template for [Routify](https://github.com/sveltech/routify) with added [TailwindCSS](https://tailwindcss.com) and localization with [Svelte i18n](https://github.com/kaisermann/svelte-i18n). Image transformation is using [sharp](https://sharp.pixelplumbing.com/) to convert your JPEGs to WebP and AVIF.
 
 **NOTICE**: This template in it's current form depends on modern browser. It uses CSS grid and offers no fallback. It can still be made to run on older browsers, just modify it to your own needs.
 
@@ -43,7 +43,7 @@ Use it in `class` on different elements, like in `about.svelte`;
 <script>
   import { _ } from "svelte-i18n";
   import { metatags } from "@roxi/routify";
-  import ModernImage from "../components/ModernImage.svelte";
+  import ModernImage from "@/components/ModernImage.svelte";
   $: metatags.title = $_("about.title");
   $: metatags.description = $_("about.description");
 </script>
