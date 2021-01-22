@@ -6,13 +6,7 @@
   import DatePickerInput from "@/components/DatePickerInput.svelte";
   import FormField from "@/components/FormField.svelte";
   import TextInput from "@/components/TextInput.svelte";
-  import {
-    isRequired,
-    minLength,
-    hasError,
-    dateAfter,
-    dateBefore,
-  } from "@/helpers/validators";
+  import { isRequired, minLength, hasError, dateAfter, dateBefore } from "@/helpers/validators";
   import { dateForDisplay } from "@/helpers/helpers";
 
   $: pageNo = $params.page ? "#" + $params.page : "";
@@ -38,13 +32,7 @@
   function checkRecord(record, locale) {
     let errorBag = [];
     isRequired(record, "first_name", $_("validation.required"), errorBag);
-    minLength(
-      record,
-      "last_name",
-      1,
-      $_("validation.min_length", { values: { chars: 1 } }),
-      errorBag
-    );
+    minLength(record, "last_name", 1, $_("validation.min_length", { values: { chars: 1 } }), errorBag);
 
     hasError(record, "date_from", $_("validation.date"), errorBag);
     hasError(record, "date_to", $_("validation.date"), errorBag);
@@ -112,12 +100,7 @@
     <div class="flex flex-col md:flex-row space-y-2 md:space-x-4 ">
       <FormField invalid={record.date_from.error.length > 0}>
         <label for="date_from">{$_("components.date.label")}</label>
-        <DatePickerInput
-          class="input"
-          id="date_from"
-          bind:errorMessage={record.date_from.error}
-          bind:dateValue={record.date_from.value}
-        />
+        <DatePickerInput class="input" id="date_from" bind:errorMessage={record.date_from.error} bind:dateValue={record.date_from.value} />
         <div class="explain">Set in advance</div>
         <div class="errors">
           {@html displayErrors(errorBag, "date_from")}
@@ -125,12 +108,7 @@
       </FormField>
       <FormField invalid={record.date_to.error.length > 0}>
         <label for="date_to">{$_("components.date.label")}</label>
-        <DatePickerInput
-          class="input"
-          id="date_to"
-          bind:errorMessage={record.date_to.error}
-          bind:dateValue={record.date_to.value}
-        />
+        <DatePickerInput class="input" id="date_to" bind:errorMessage={record.date_to.error} bind:dateValue={record.date_to.value} />
         <div class="explain">Null by default</div>
         <div class="errors">
           {@html displayErrors(errorBag, "date_to")}
@@ -145,9 +123,7 @@
     </pre>
   <p>
     {$_("components.query_params")}
-    <button class="underline font-bold ml-2" on:click={linkToRandomPage}
-      >Test</button
-    >
+    <button class="underline font-bold ml-2" on:click={linkToRandomPage}>Test</button>
   </p>
   <pre>{JSON.stringify($params)}</pre>
   <pre>{$locale}</pre>

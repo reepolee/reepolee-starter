@@ -1,6 +1,6 @@
 // ----------------------------------------------------------------------------
 function isRequired(paramRecord, paramField, errorMessage, errorBag) {
-// ----------------------------------------------------------------------------
+  // ----------------------------------------------------------------------------
   if (paramRecord[paramField].value.length > 0) return true;
   errorBag.push({ field: paramField, message: errorMessage });
   return false;
@@ -8,15 +8,15 @@ function isRequired(paramRecord, paramField, errorMessage, errorBag) {
 
 // ----------------------------------------------------------------------------
 function hasError(paramRecord, paramField, errorMessage, errorBag) {
-// ----------------------------------------------------------------------------
-  if (paramRecord[paramField].error === '') return true;
+  // ----------------------------------------------------------------------------
+  if (paramRecord[paramField].error === "") return true;
   errorBag.push({ field: paramField, message: errorMessage });
   return false;
 }
 
 // ----------------------------------------------------------------------------
 function minLength(paramRecord, paramField, paramLength, errorMessage, errorBag) {
-// ----------------------------------------------------------------------------
+  // ----------------------------------------------------------------------------
   if (paramRecord[paramField].value.length >= paramLength) return true;
   errorBag.push({ field: paramField, message: errorMessage });
   return false;
@@ -24,7 +24,7 @@ function minLength(paramRecord, paramField, paramLength, errorMessage, errorBag)
 
 // ----------------------------------------------------------------------------
 function dateBefore(paramRecord, paramField, paramAfter, errorMessage, errorBag) {
-//----------------------------------------------------------------------------
+  //----------------------------------------------------------------------------
   if (paramRecord[paramField].value <= paramAfter) return true;
   errorBag.push({ field: paramField, message: errorMessage });
   return false;
@@ -32,12 +32,10 @@ function dateBefore(paramRecord, paramField, paramAfter, errorMessage, errorBag)
 
 // ----------------------------------------------------------------------------
 function dateAfter(paramRecord, paramField, paramAfter, errorMessage, errorBag) {
-//----------------------------------------------------------------------------
+  //----------------------------------------------------------------------------
   if (paramRecord[paramField].value >= paramAfter) return true;
   errorBag.push({ field: paramField, message: errorMessage });
   return false;
 }
 
-export {
-  isRequired, minLength, hasError, dateBefore, dateAfter,
-};
+export { isRequired, minLength, hasError, dateBefore, dateAfter };
