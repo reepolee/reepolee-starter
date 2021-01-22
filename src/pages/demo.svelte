@@ -31,6 +31,10 @@
   $: errorBag = checkRecord(record, $locale);
   $: isValidRecord = errorBag.length === 0;
 
+  $: l(isValidRecord);
+  $: l(isValidRecord, "is valid record");
+  $: l(errorBag, "Errors", "color:white; background:red");
+
   function checkRecord(record, locale) {
     let errorBag = [];
     isRequired(record, "first_name", $_("validation.required"), errorBag);

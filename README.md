@@ -120,7 +120,7 @@ Use as shown earlier, like
 
 ## IMAGE HANDLING
 
-There is a fixed folder `assets/images` where all the final images of the app reside. However, the build process takes your content related images from `content/images` and transforms them into `assets/responsive` via `npm run prepareImages` as responsive versions. By default it produces widths of 300, 400, 800, 1200 and 1920px along with optimized original. Use `ModernImage` component instead of `<img>`.
+There is a fixed folder `assets/images` where all the final images of the app reside. However, the build process takes your content related images from `content/images` and transforms them into `assets/responsive` via `npm run prepareImages` as responsive versions. By default it produces widths of 300, 400, 800, 1200 and 1920px along with optimized original. Use `ModernImage` component instead of `<img>` to gain responsiveness and future formats of WebP and AVIF.
 
 ```html
 <ModernImage src="/responsive/reepolee-labs.jpg" alt={$_('app.head.company')} />
