@@ -136,6 +136,6 @@ Icons by:
 
 ## Keep it synced
 
-```basj
+```bash
 git remote add upstream git@github.com:reepolee/reepolee-starter.git
 ```
