@@ -33,29 +33,10 @@
     let errorBag = [];
     isRequired(record, "first_name", $_("validation.required"), errorBag);
     minLength(record, "last_name", 1, $_("validation.min_length", { values: { chars: 1 } }), errorBag);
-
     hasError(record, "date_from", $_("validation.date"), errorBag);
     hasError(record, "date_to", $_("validation.date"), errorBag);
-
-    dateAfter(
-      record,
-      "date_from",
-      "2020-01-01",
-      $_("validation.date_after", {
-        values: { date: dateForDisplay("2020-01-01") },
-      }),
-      errorBag
-    );
-
-    dateBefore(
-      record,
-      "date_to",
-      "2021-12-31",
-      $_("validation.date_before", {
-        values: { date: dateForDisplay("2020-12-31") },
-      }),
-      errorBag
-    );
+    dateAfter(record, "date_from", "2020-01-01", $_("validation.date_after", { values: { date: dateForDisplay("2020-01-01") } }), errorBag);
+    dateBefore(record, "date_to", "2021-12-31", $_("validation.date_before", { values: { date: dateForDisplay("2020-12-31") } }), errorBag);
 
     return errorBag;
   }
