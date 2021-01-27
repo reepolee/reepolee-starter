@@ -17,13 +17,15 @@ function ensureIntersectionObserver() {
 }
 
 export default function viewport(element) {
-  ensureIntersectionObserver();
+  if (window.IntersectionObserver) {
+    ensureIntersectionObserver();
 
-  intersectionObserver.observe(element);
+    intersectionObserver.observe(element);
 
-  return {
-    destroy() {
-      intersectionObserver.unobserve(element);
-    },
-  };
+    return {
+      destroy() {
+        intersectionObserver.unobserve(element);
+      },
+    };
+  } else return true;
 }
