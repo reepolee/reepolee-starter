@@ -137,5 +137,5 @@ Icons by:
 ## Keep it synced
 
 ```bash
-git remote add upstream git@github.com:reepolee/reepolee-starter.git
+git remote add upstream https://github.com/reepolee/reepolee-starter.git
 ```
