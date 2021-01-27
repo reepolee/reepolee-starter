@@ -139,4 +139,6 @@ Icons by:
 ```bash
 git remote add upstream https://github.com/reepolee/reepolee-starter.git
 git fetch upstream
+git checkout main
+git merge upstream/main
 ```
