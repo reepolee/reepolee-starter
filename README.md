@@ -132,3 +132,10 @@ Icons by:
 
 - [Remix Design](https://github.com/Remix-Design/RemixIcon) under Apache 2.0 license
 - [Material Design Icons](https://github.com/Templarian/MaterialDesign) under Apache 2.0 license
+
+
+## Keep it synced
+
+```basj
+git remote add upstream git@github.com:reepolee/reepolee-starter.git
+```
